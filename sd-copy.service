@@ -1,0 +1,14 @@
+[Unit]
+Description=SD-Copy Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/scripts/sd-copy.sh
+User=root
+Group=root
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
